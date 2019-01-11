@@ -57,10 +57,7 @@ public class HourGlass {
                     { values[i+2][j-1], values[i+2][j], values[i+2][j+1] },
                 };
 
-                
-                if (i == 0) {
-                    sumValues(tempValues);
-                }
+                sumValues(tempValues);
             }
         }
     }
