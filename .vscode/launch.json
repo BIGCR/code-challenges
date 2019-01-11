@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HourGlass",
+            "request": "launch",
+            "mainClass": "code.challenges.hourglass.HourGlass",
+            "projectName": "code-challenges"
+        }
+    ]
+}
