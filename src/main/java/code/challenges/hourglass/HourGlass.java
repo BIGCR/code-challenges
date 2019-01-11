@@ -25,14 +25,13 @@ public class HourGlass {
 
         Potential Solution:
             - Send a 3 X 3 matrix into a function which does calculation
-            - Store 
 
         Assumptions:
             - Can be negative numbers
             - Array will ONLY have 16 hour glasses
     **/
 
-    public static void sumHourGlassesFromMatrix() {
+    public static void findLargestHourGlassSum() {
         int[][] values = new int[][] {
             { -9, -9, -9, 1, 1, 1 }, 
             { 0, -9,  0, 4, 3, 2 },
@@ -42,6 +41,7 @@ public class HourGlass {
             { 0, 0, 1, 2, 4, 0 }, 
         };
 
+        int maxSum = 0;
         //Every Row
         for(int i = 0; i < 6; i++) {
             if(i >= 4) {
@@ -57,9 +57,14 @@ public class HourGlass {
                     { values[i+2][j-1], values[i+2][j], values[i+2][j+1] },
                 };
 
-                sumValues(tempValues);
+                int tempSum = sumValues(tempValues);
+                if(tempSum > maxSum) {
+                    maxSum = tempSum;
+                }
             }
         }
+        
+        System.out.println("\nLargest Sum is: "+maxSum);
     }
 
     public static int sumValues(int[][] values) {

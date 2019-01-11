@@ -7,6 +7,6 @@ import code.challenges.hourglass.HourGlass;
 
 public class App {
     public static void main(String[] args) {
-        HourGlass.sumHourGlassesFromMatrix();
+        HourGlass.findLargestHourGlassSum();
     }
 }
