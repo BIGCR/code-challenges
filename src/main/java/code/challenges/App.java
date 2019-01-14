@@ -4,9 +4,11 @@
 package code.challenges;
 
 import code.challenges.hourglass.HourGlass;
+import code.challenges.intersections.Intersections;
 
 public class App {
     public static void main(String[] args) {
-        HourGlass.findLargestHourGlassSum();
+        // HourGlass.findLargestHourGlassSum();
+        Intersections.findIntersectionsProblem();
     }
 }
