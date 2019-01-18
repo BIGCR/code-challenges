@@ -3,10 +3,25 @@ package code.challenges.intersections;
 import java.util.ArrayList;
 
 public class Intersections {
+    /*
+        Problem: Given two different arrays that contain ranges of numbers, write a function that will find and return all intersections
+        Example:
+        A: [(0, 2), (3,5), (7, 8) (9,12)]
+        B: [(1, 2), (3,6), (8, 9), (10,11)]
+        Result: [(1, 2), (3,5), (10,11)]
+        Asumptions:
+            - The ranges are sorted
+            - The values can be +/-
+            - A and B can be of two different sizes
+            - Values will be unique within each given array
+
+        Test scenarios:
+            - 
+        */
 
     public static void findIntersectionsProblem() {
-        Node[] arrA = new Node[]{new Node(0, 2), new Node(3, 5), new Node(9, 12)};
-        Node[] arrB = new Node[]{new Node(1, 2), new Node(3, 6), new Node(10, 11)};
+        Node[] arrA = new Node[]{new Node(0, 2), new Node(3, 5), new Node(6, 7), new Node(8, 9), new Node(12, 13)};
+        Node[] arrB = new Node[]{new Node(1, 2), new Node(6, 10), new Node(11, 13)};
         
         ArrayList<Node> intersections = findIntersections(arrA, arrB);
     }
@@ -22,6 +37,11 @@ public class Intersections {
           Node aElement = arrA[aIndex];
           Node bElement = arrB[bIndex];
           
+
+          if((aIndex+1) <= aSize) {
+
+          }
+          
           // System.out.print("Comparing a values: "+aElement.start+"\t "+aElement.end+"\n");
           // System.out.print("Comparing end values: "+bElement.start+"\t "+bElement.end+"\n");
           
@@ -31,6 +51,7 @@ public class Intersections {
             aIndex++;
           } else {
             intersections.add(compareNodes(aElement, bElement));
+            
             aIndex++;
             bIndex++;
           }
